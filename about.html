@@ -1,19 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About | Water City Rentals</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Water City Rentals</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102033;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    .nav {
+      background: #07121f;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 14px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(7,18,31,0.75), rgba(7,18,31,0.75)), url("hero.jpg") center bottom / cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 110px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      margin: 0 0 14px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 750px;
+      margin: auto;
+      color: #dceaf3;
+    }
+
+    .section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      margin: 0 0 16px;
+      color: #102033;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #536270;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e8edf2;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .cta {
+      background: #eef8fc;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 15px 26px;
+      border-radius: 999px;
+      background: #00a6d6;
+      color: white;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #07121f;
+      color: #b9c7d3;
+      text-align: center;
+      padding: 28px 18px;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body style="font-family:Arial; padding:40px;">
 
-<h1>About Water City Rentals</h1>
+<body>
 
-<p>Water City Rentals is a Chicago-based rental service offering jet skis and boat experiences on Lake Michigan.</p>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<p>Our goal is simple — make booking easy, get you on the water fast, and give you a great experience without the hassle.</p>
+  <section class="hero">
+    <h1>About Water City Rentals</h1>
+    <p>Chicago lakefront rentals made simple, fun, and easy to book.</p>
+  </section>
 
-<p>We focus on convenience, clear pricing, and a smooth booking process so you spend less time planning and more time enjoying the ride.</p>
+  <section class="section">
+    <h2>Who We Are</h2>
+    <p>
+      Water City Rentals is a Chicago-based rental service offering jet ski and boat rental experiences on the lakefront.
+      Our goal is simple: make it easier for people to enjoy Lake Michigan without complicated planning, endless phone calls,
+      or confusing booking steps.
+    </p>
 
-<a href="index.html">Back to Home</a>
+    <p>
+      Whether someone wants a quick jet ski ride, a lakefront experience with friends, or a simple way to get out on the water,
+      we focus on clear communication, easy online booking, and a smooth customer experience from start to finish.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>What Makes Us Different</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Easy Booking</h3>
+        <p>Customers can check availability and reserve online instead of waiting for a call back.</p>
+      </div>
+
+      <div class="card">
+        <h3>Chicago Lakefront</h3>
+        <p>Enjoy the water with one of the best views in the city: Lake Michigan and the Chicago skyline.</p>
+      </div>
+
+      <div class="card">
+        <h3>Simple Experience</h3>
+        <p>Book your time, get your confirmation, show up, and enjoy the ride.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our Focus</h2>
+    <p>
+      We want the rental process to feel professional, safe, and straightforward. That means clear expectations before arrival,
+      weather-aware scheduling, proper check-in, and instructions before getting on the water.
+    </p>
+
+    <p>
+      Lake Michigan conditions can change quickly, so safety and weather conditions always come first. If conditions are not safe,
+      bookings may need to be adjusted or rescheduled.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Get on the Water?</h2>
+    <p>Check availability online and reserve your rental.</p>
+    <a class="btn" href="index.html#book">Check Availability & Book</a>
+  </section>
+
+  <footer>
+    © 2026 Water City Rentals. All rights reserved.
+  </footer>
 
 </body>
 </html>
