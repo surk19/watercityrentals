@@ -10,7 +10,7 @@ body { margin:0; font-family:Arial; color:#111; }
 
 .hero {
   height:90vh;
-  background:url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade') center/cover no-repeat;
+  background:url('hero.jpg') center/cover no-repeat;
   background-position: center bottom;
   display:flex;
   align-items:center;
@@ -54,6 +54,11 @@ p { font-size:18px; }
   width:280px;
 }
 
+.booking-section {
+  background:#f9f9f9;
+  padding:60px 20px;
+}
+
 footer { text-align:center; padding:20px; background:#f5f5f5; }
 </style>
 </head>
@@ -66,10 +71,10 @@ footer { text-align:center; padding:20px; background:#f5f5f5; }
     <p>Jet Ski & Boat Rentals on Chicago’s Lakefront</p>
 
     <a class="btn" href="https://app.squareup.com/appointments/book/wh7kkviwxj9j3f/LR3E5CD72RQ31/start" target="_blank">
-      Check Availability & Book
+      Quick Book
     </a>
 
-    <a class="btn" href="tel:+1XXXXXXXXXX">Call or Text</a>
+    <a class="btn" href="tel:+13127520440">Call or Text</a>
   </div>
 </div>
 
@@ -106,6 +111,16 @@ footer { text-align:center; padding:20px; background:#f5f5f5; }
   <p>1. Book online</p>
   <p>2. Show up</p>
   <p>3. Ride</p>
+</div>
+
+<div class="booking-section">
+  <div class="section">
+    <h2>Check Availability & Book</h2>
+    <p>Select your time and reserve instantly.</p>
+
+    <!-- Square Embed -->
+    <script src='https://square.site/appointments/buyer/widget/wh7kkviwxj9j3f/LR3E5CD72RQ31.js'></script>
+  </div>
 </div>
 
 <div class="section">
