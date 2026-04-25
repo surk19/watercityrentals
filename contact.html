@@ -1,19 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Contact | Water City Rentals</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102033;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    .nav {
+      background: #07121f;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 14px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(7,18,31,0.78), rgba(7,18,31,0.78)), url("hero.jpg") center bottom / cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 110px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      margin: 0 0 14px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: auto;
+      color: #dceaf3;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e8edf2;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin: 0 0 12px;
+      color: #102033;
+    }
+
+    .card p {
+      color: #536270;
+      font-size: 17px;
+      margin: 8px 0;
+    }
+
+    .card a {
+      color: #007fa8;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      background: #00a6d6;
+      color: white !important;
+      font-weight: bold;
+    }
+
+    .hours {
+      background: #eef8fc;
+      border-radius: 18px;
+      padding: 30px;
+      margin-top: 28px;
+    }
+
+    .hours h2 {
+      margin-top: 0;
+    }
+
+    .note {
+      color: #536270;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #07121f;
+      color: #b9c7d3;
+      text-align: center;
+      padding: 28px 18px;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body style="font-family:Arial; padding:40px;">
 
-<h1>Contact Us</h1>
+<body>
 
-<p>Call or Text: <a href="tel:+13127520440">+1 312-752-0440</a></p>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<p>Instagram: @watercityrental</p>
+  <section class="hero">
+    <h1>Contact Water City Rentals</h1>
+    <p>Questions about booking, availability, location, or group rentals? Reach out anytime.</p>
+  </section>
 
-<p>Location: Chicago Lakefront (details provided after booking)</p>
+  <section class="section">
+    <div class="cards">
 
-<a href="index.html">Back to Home</a>
+      <div class="card">
+        <h2>Call or Text</h2>
+        <p>For quick questions, booking help, or same-day availability, call or text us.</p>
+        <p><a href="tel:+13127520440">+1 312-752-0440</a></p>
+        <a class="btn" href="tel:+13127520440">Call Now</a>
+      </div>
+
+      <div class="card">
+        <h2>Book Online</h2>
+        <p>The fastest way to reserve your rental is through our online booking system.</p>
+        <p>Check availability, choose your time, and reserve instantly.</p>
+        <a class="btn" href="index.html#book">Check Availability</a>
+      </div>
+
+      <div class="card">
+        <h2>Instagram</h2>
+        <p>Follow us for updates, photos, availability, and lakefront rental content.</p>
+        <p>@watercityrental</p>
+      </div>
+
+    </div>
+
+    <div class="hours">
+      <h2>Hours of Operation</h2>
+      <p><strong>Seasonal hours vary based on weather, lake conditions, and availability.</strong></p>
+      <p>Use the online booking calendar to see current available times.</p>
+      <p class="note">Lake Michigan conditions can change quickly, so rentals may be adjusted or rescheduled if weather or water conditions are unsafe.</p>
+    </div>
+
+    <div class="hours">
+      <h2>Location</h2>
+      <p><strong>Chicago Lakefront</strong></p>
+      <p>Exact meeting location and arrival instructions are provided after booking or confirmation.</p>
+      <p class="note">Please arrive on time so check-in and safety instructions can be completed before your rental begins.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Water City Rentals. All rights reserved.
+  </footer>
 
 </body>
 </html>
