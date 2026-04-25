@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ | Water City Rentals</title>
+</head>
+<body style="font-family:Arial; padding:40px;">
+
+<h1>Frequently Asked Questions</h1>
+
+<h3>Do I need a license?</h3>
+<p>No special license required. Basic instructions will be provided.</p>
+
+<h3>What is the age requirement?</h3>
+<p>Must be 18+ to rent. Riders may vary depending on safety guidelines.</p>
+
+<h3>What if the weather is bad?</h3>
+<p>Bookings may be rescheduled if conditions are unsafe.</p>
+
+<h3>How do I book?</h3>
+<p>Use our online booking system to check availability and reserve your time.</p>
+
+<a href="index.html">Back to Home</a>
+
+</body>
+</html>
