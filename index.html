@@ -1,132 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Water City Rentals | Chicago</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water City Rentals | Chicago</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #111;
-    }
+<style>
+body { margin:0; font-family:Arial; color:#111; }
 
-    .hero {
-      height: 90vh;
-      background: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
+.hero {
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1519046904884-53103b34b206') center/cover no-repeat;
+  display:flex; align-items:center; justify-content:center; text-align:center; color:white;
+}
+.overlay { background:rgba(0,0,0,0.6); padding:40px; border-radius:10px; }
 
-    .overlay {
-      background: rgba(0,0,0,0.55);
-      padding: 40px;
-      border-radius: 10px;
-    }
+h1 { font-size:48px; margin:0; }
+p { font-size:18px; }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+.btn {
+  display:inline-block;
+  padding:15px 25px;
+  margin:10px;
+  background:#00aaff;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+}
 
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
+.section { padding:60px 20px; max-width:1000px; margin:auto; text-align:center; }
 
-    .btn {
-      display: inline-block;
-      padding: 15px 25px;
-      margin: 10px;
-      background: #00aaff;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 18px;
-    }
+.cards {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
 
-    .section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
+.card {
+  border:1px solid #ddd;
+  border-radius:10px;
+  padding:20px;
+  width:280px;
+}
 
-    .pricing div {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-
-    .steps {
-      text-align: left;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #f5f5f5;
-    }
-  </style>
+footer { text-align:center; padding:20px; background:#f5f5f5; }
+</style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <div class="overlay">
-      <h1>Water City Rentals</h1>
-      <p>Jet Ski & Boat Rentals on Chicago’s Lakefront</p>
+<div class="hero">
+  <div class="overlay">
+    <h1>Water City Rentals</h1>
+    <p>Ride Jet Skis & Boats on Chicago’s Lakefront</p>
 
-      <a class="btn" href="https://app.squareup.com/appointments/book/wh7kkviwxj9j3f/LR3E5CD72RQ31/start" target="_blank">
-        Check Availability & Book
-      </a>
+    <a class="btn" href="https://app.squareup.com/appointments/book/wh7kkviwxj9j3f/LR3E5CD72RQ31/start" target="_blank">
+      Check Availability & Book
+    </a>
 
-      <a class="btn" href="tel:+1XXXXXXXXXX">
-        Call or Text
-      </a>
+    <a class="btn" href="tel:+1XXXXXXXXXX">Call or Text</a>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Rentals</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Jet Skis</h3>
+      <p>Fast, fun, and perfect for cruising the lake.</p>
+    </div>
+    <div class="card">
+      <h3>Boat Rentals</h3>
+      <p>Relax and enjoy the Chicago skyline from the water.</p>
     </div>
   </div>
+</div>
 
-  <div class="section">
-    <h2>Simple Booking. No Hassle.</h2>
-    <p>Skip the back-and-forth calls. Book online, show up, and ride.</p>
-  </div>
+<div class="section">
+  <h2>Pricing</h2>
+  <p>Jet Ski (30 min) – $120</p>
+  <p>Jet Ski (1 hour) – $180</p>
+  <p>Boat Rental – Starting at $250</p>
+</div>
 
-  <div class="section pricing">
-    <h2>Pricing</h2>
-    <div>Jet Ski (30 min) – $120</div>
-    <div>Jet Ski (1 hour) – $180</div>
-    <div>Boat Rental – Starting at $250</div>
-  </div>
+<div class="section">
+  <h2>Why Choose Us</h2>
+  <p>✔ Easy online booking</p>
+  <p>✔ No hassle or long wait times</p>
+  <p>✔ Prime Chicago lakefront location</p>
+</div>
 
-  <div class="section">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <p>1. Book your time online</p>
-      <p>2. Show up at the location</p>
-      <p>3. Get on and ride</p>
-    </div>
-  </div>
+<div class="section">
+  <h2>How It Works</h2>
+  <p>1. Book online</p>
+  <p>2. Show up</p>
+  <p>3. Ride</p>
+</div>
 
-  <div class="section">
-    <h2>Location</h2>
-    <p>Chicago Lakefront (Exact location provided after booking)</p>
-  </div>
+<div class="section">
+  <h2>Location</h2>
+  <p>Chicago Lakefront (details after booking)</p>
+</div>
 
-  <div class="section">
-    <h2>Follow Us</h2>
-    <p>Instagram: @watercityrental</p>
-  </div>
-
-  <footer>
-    © 2026 Water City Rentals
-  </footer>
+<footer>
+  © 2026 Water City Rentals
+</footer>
 
 </body>
 </html>
