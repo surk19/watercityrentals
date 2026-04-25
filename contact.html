@@ -21,7 +21,7 @@
 
     .nav {
       background: #07121f;
-      padding: 16px 20px;
+      padding: 18px 20px;
       text-align: center;
     }
 
@@ -32,19 +32,22 @@
       font-size: 15px;
     }
 
-    .hero {
-      background: linear-gradient(rgba(7,18,31,0.78), rgba(7,18,31,0.78)), url("hero.jpg") center bottom / cover no-repeat;
+    .page-hero {
+      background:
+        linear-gradient(rgba(7,18,31,0.78), rgba(7,18,31,0.82)),
+        url("hero.jpg") center bottom / cover no-repeat;
       color: white;
       text-align: center;
-      padding: 110px 20px;
+      padding: 120px 20px;
     }
 
-    .hero h1 {
+    .page-hero h1 {
       font-size: clamp(40px, 6vw, 68px);
-      margin: 0 0 14px;
+      line-height: 1;
+      margin: 0 0 16px;
     }
 
-    .hero p {
+    .page-hero p {
       font-size: 20px;
       max-width: 760px;
       margin: auto;
@@ -54,7 +57,7 @@
     .section {
       max-width: 1100px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 75px 20px;
     }
 
     .cards {
@@ -74,7 +77,6 @@
     .card h2 {
       font-size: 24px;
       margin: 0 0 12px;
-      color: #102033;
     }
 
     .card p {
@@ -98,14 +100,14 @@
       font-weight: bold;
     }
 
-    .hours {
+    .info-box {
       background: #eef8fc;
       border-radius: 18px;
       padding: 30px;
       margin-top: 28px;
     }
 
-    .hours h2 {
+    .info-box h2 {
       margin-top: 0;
     }
 
@@ -121,6 +123,13 @@
       padding: 28px 18px;
       font-size: 14px;
     }
+
+    @media (max-width: 700px) {
+      .nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
@@ -133,7 +142,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="hero">
+  <section class="page-hero">
     <h1>Contact Water City Rentals</h1>
     <p>Questions about booking, availability, location, or group rentals? Reach out anytime.</p>
   </section>
@@ -163,14 +172,14 @@
 
     </div>
 
-    <div class="hours">
+    <div class="info-box">
       <h2>Hours of Operation</h2>
       <p><strong>Seasonal hours vary based on weather, lake conditions, and availability.</strong></p>
       <p>Use the online booking calendar to see current available times.</p>
       <p class="note">Lake Michigan conditions can change quickly, so rentals may be adjusted or rescheduled if weather or water conditions are unsafe.</p>
     </div>
 
-    <div class="hours">
+    <div class="info-box">
       <h2>Location</h2>
       <p><strong>Chicago Lakefront</strong></p>
       <p>Exact meeting location and arrival instructions are provided after booking or confirmation.</p>
