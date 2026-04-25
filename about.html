@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>About Us | Water City Rentals</title>
 
   <style>
@@ -20,7 +21,7 @@
 
     .nav {
       background: #07121f;
-      padding: 16px 20px;
+      padding: 18px 20px;
       text-align: center;
     }
 
@@ -31,21 +32,24 @@
       font-size: 15px;
     }
 
-    .hero {
-      background: linear-gradient(rgba(7,18,31,0.75), rgba(7,18,31,0.75)), url("hero.jpg") center bottom / cover no-repeat;
+    .page-hero {
+      background:
+        linear-gradient(rgba(7,18,31,0.78), rgba(7,18,31,0.78)),
+        url("hero.jpg") center bottom / cover no-repeat;
       color: white;
       text-align: center;
       padding: 110px 20px;
     }
 
-    .hero h1 {
+    .page-hero h1 {
       font-size: clamp(40px, 6vw, 68px);
-      margin: 0 0 14px;
+      line-height: 1;
+      margin: 0 0 16px;
     }
 
-    .hero p {
+    .page-hero p {
       font-size: 20px;
-      max-width: 750px;
+      max-width: 760px;
       margin: auto;
       color: #dceaf3;
     }
@@ -59,7 +63,6 @@
     .section h2 {
       font-size: clamp(30px, 4vw, 44px);
       margin: 0 0 16px;
-      color: #102033;
     }
 
     .section p {
@@ -75,7 +78,7 @@
     }
 
     .card {
-      background: #ffffff;
+      background: white;
       border: 1px solid #e8edf2;
       border-radius: 18px;
       padding: 28px;
@@ -110,6 +113,13 @@
       padding: 28px 18px;
       font-size: 14px;
     }
+
+    @media (max-width: 700px) {
+      .nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
@@ -122,7 +132,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="hero">
+  <section class="page-hero">
     <h1>About Water City Rentals</h1>
     <p>Chicago lakefront rentals made simple, fun, and easy to book.</p>
   </section>
