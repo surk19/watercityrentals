@@ -1,136 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Water City Rentals | Chicago</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-body { margin:0; font-family:Arial; color:#111; }
+  <title>Water City Rentals | Chicago Boat & Jet Ski Rentals</title>
 
-.hero {
-  height:90vh;
-  background:url('hero.jpg') center/cover no-repeat;
-  background-position: center bottom;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-.overlay {
-  background:rgba(0,0,0,0.65);
-  padding:40px;
-  border-radius:10px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-h1 { font-size:48px; margin:0; }
-p { font-size:18px; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102033;
+      background: #ffffff;
+      line-height: 1.6;
+    }
 
-.btn {
-  display:inline-block;
-  padding:15px 25px;
-  margin:10px;
-  background:#00aaff;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
-}
+    a {
+      text-decoration: none;
+    }
 
-.section { padding:60px 20px; max-width:1000px; margin:auto; text-align:center; }
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(rgba(7, 18, 31, 0.75), rgba(7, 18, 31, 0));
+    }
 
-.cards {
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
+    .nav a {
+      color: white;
+      margin: 0 14px;
+      font-weight: bold;
+      font-size: 15px;
+    }
 
-.card {
-  border:1px solid #ddd;
-  border-radius:10px;
-  padding:20px;
-  width:280px;
-}
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 30px 18px;
+      background: url("hero.jpg") center bottom / cover no-repeat;
+    }
 
-.booking-section {
-  background:#f9f9f9;
-  padding:60px 20px;
-}
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
 
-footer { text-align:center; padding:20px; background:#f5f5f5; }
-</style>
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.58),
+        rgba(0, 0, 0, 0.66)
+      );
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 860px;
+      padding: 30px;
+    }
+
+    .eyebrow {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #b9efff;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      font-size: clamp(18px, 2vw, 24px);
+      margin: 0 auto 28px;
+      max-width: 720px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #00a6d6;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #008fba;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #102033;
+    }
+
+    .btn-secondary:hover {
+      background: #f1f1f1;
+    }
+
+    .section {
+      padding: 75px 20px;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      margin: 0 0 10px;
+      color: #102033;
+    }
+
+    .section-header p {
+      font-size: 18px;
+      color: #5d6b78;
+      max-width: 680px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e8edf2;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin: 0 0 10px;
+      color: #102033;
+    }
+
+    .card p {
+      color: #5d6b78;
+      margin: 0;
+    }
+
+    .pricing {
+      background: #f5fbff;
+      max-width: none;
+    }
+
+    .pricing-inner {
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .price-list {
+      max-width: 760px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid #e8edf2;
+      padding: 18px 8px;
+      font-size: 18px;
+    }
+
+    .price-row:last-child {
+      border-bottom: none;
+    }
+
+    .price-row strong {
+      color: #102033;
+    }
+
+    .price-row span {
+      color: #007fa8;
+      font-weight: bold;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      counter-reset: step;
+    }
+
+    .step {
+      background: #102033;
+      color: white;
+      border-radius: 18px;
+      padding: 28px;
+      position: relative;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-flex;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      background: #00a6d6;
+      border-radius: 50%;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #d7e4ec;
+    }
+
+    .booking {
+      background: #eef8fc;
+      padding: 75px 20px;
+    }
+
+    .booking-box {
+      max-width: 1050px;
+      margin: auto;
+      background: white;
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .booking-box h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      margin: 0 0 8px;
+    }
+
+    .booking-box p {
+      color: #5d6b78;
+      margin-bottom: 25px;
+    }
+
+    .location {
+      text-align: center;
+    }
+
+    .location-card {
+      background: #102033;
+      color: white;
+      border-radius: 22px;
+      padding: 34px;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .location-card p {
+      margin: 8px 0;
+      color: #d7e4ec;
+    }
+
+    footer {
+      background: #07121f;
+      color: #b9c7d3;
+      text-align: center;
+      padding: 28px 18px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        padding: 14px 10px;
+      }
+
+      .nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 84vh;
+      }
+
+      .hero-content {
+        padding: 10px;
+      }
+
+      .price-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <div class="overlay">
-    <h1>Water City Rentals</h1>
-    <p>Jet Ski & Boat Rentals on Chicago’s Lakefront</p>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <a class="btn" href="https://app.squareup.com/appointments/book/wh7kkviwxj9j3f/LR3E5CD72RQ31/start" target="_blank">
-      Quick Book
-    </a>
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="hero.jpg">
+      <source src="hero-video.mp4" type="video/mp4" />
+    </video>
 
-    <a class="btn" href="tel:+13127520440">Call or Text</a>
-  </div>
-</div>
+    <div class="hero-content">
+      <div class="eyebrow">Chicago Lakefront Rentals</div>
+      <h1>Water City Rentals</h1>
+      <p>Jet ski and boat rentals with easy online booking on Chicago’s lakefront.</p>
 
-<div class="section">
-  <h2>Our Rentals</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Jet Skis</h3>
-      <p>Fast, fun, and perfect for cruising the lake.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#book">Check Availability & Book</a>
+        <a class="btn btn-secondary" href="tel:+13127520440">Call or Text</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>Boat Rentals</h3>
-      <p>Relax and enjoy the Chicago skyline from the water.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Rentals Made Simple</h2>
+      <p>Skip the back-and-forth calls. Choose your rental, check availability, book online, and get ready to ride.</p>
     </div>
-  </div>
-</div>
 
-<div class="section">
-  <h2>Pricing</h2>
-  <p>Jet Ski (30 min) – $120</p>
-  <p>Jet Ski (1 hour) – $180</p>
-  <p>Boat Rental – Starting at $250</p>
-</div>
+    <div class="cards">
+      <div class="card">
+        <h3>Jet Ski Rentals</h3>
+        <p>Fast, fun, and perfect for enjoying Lake Michigan with the Chicago skyline in the background.</p>
+      </div>
 
-<div class="section">
-  <h2>Why Choose Us</h2>
-  <p>✔ Easy online booking</p>
-  <p>✔ No hassle or long wait times</p>
-  <p>✔ Prime Chicago lakefront location</p>
-</div>
+      <div class="card">
+        <h3>Boat Rentals</h3>
+        <p>Relax on the water, cruise the lakefront, and enjoy a clean Chicago summer experience.</p>
+      </div>
 
-<div class="section">
-  <h2>How It Works</h2>
-  <p>1. Book online</p>
-  <p>2. Show up</p>
-  <p>3. Ride</p>
-</div>
+      <div class="card">
+        <h3>Easy Online Booking</h3>
+        <p>Pick a time, reserve your spot, and pay online without waiting for a call back.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="booking-section">
-  <div class="section">
-    <h2>Check Availability & Book</h2>
-    <p>Select your time and reserve instantly.</p>
+  <section class="section pricing">
+    <div class="pricing-inner">
+      <div class="section-header">
+        <h2>Pricing</h2>
+        <p>Simple rental options. Final availability and details are confirmed during booking.</p>
+      </div>
 
-    <!-- Square Embed -->
-    <script src='https://square.site/appointments/buyer/widget/wh7kkviwxj9j3f/LR3E5CD72RQ31.js'></script>
-  </div>
-</div>
+      <div class="price-list">
+        <div class="price-row">
+          <strong>Jet Ski Rental</strong>
+          <span>Starting at $120</span>
+        </div>
 
-<div class="section">
-  <h2>Location</h2>
-  <p>Chicago Lakefront (details after booking)</p>
-</div>
+        <div class="price-row">
+          <strong>Extended Jet Ski Rental</strong>
+          <span>Starting at $180</span>
+        </div>
 
-<footer>
-  © 2026 Water City Rentals
-</footer>
+        <div class="price-row">
+          <strong>Boat Rental</strong>
+          <span>Starting at $250</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>A simple process from booking to ride time.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Book Online</h3>
+        <p>Choose your rental and reserve an available time.</p>
+      </div>
+
+      <div class="step">
+        <h3>Get Details</h3>
+        <p>Receive your confirmation and meeting details after booking.</p>
+      </div>
+
+      <div class="step">
+        <h3>Show Up & Ride</h3>
+        <p>Arrive on time, check in, and enjoy the lakefront.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="book">
+    <div class="booking-box">
+      <h2>Check Availability & Book</h2>
+      <p>Select your rental, choose a time, and reserve instantly.</p>
+
+      <!-- Start Square Appointments Embed Code -->
+      <script src="https://square.site/appointments/buyer/widget/wh7kkviwxj9j3f/LR3E5CD72RQ31.js"></script>
+      <!-- End Square Appointments Embed Code -->
+    </div>
+  </section>
+
+  <section class="section location">
+    <div class="section-header">
+      <h2>Location</h2>
+      <p>Serving Chicago’s lakefront during the summer season.</p>
+    </div>
+
+    <div class="location-card">
+      <h3>Chicago Lakefront</h3>
+      <p>Exact meeting location is provided after booking.</p>
+      <p>Call or text: <a href="tel:+13127520440" style="color:#b9efff;">+1 312-752-0440</a></p>
+      <p>Follow us on Instagram: @watercityrental</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Water City Rentals. All rights reserved.
+  </footer>
 
 </body>
 </html>
