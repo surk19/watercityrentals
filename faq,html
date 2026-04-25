@@ -1,25 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>FAQ | Water City Rentals</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102033;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    .nav {
+      background: #07121f;
+      padding: 16px 20px;
+      text-align: center;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 14px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(7,18,31,0.78), rgba(7,18,31,0.78)), url("hero.jpg") center bottom / cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 110px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      margin: 0 0 14px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: auto;
+      color: #dceaf3;
+    }
+
+    .section {
+      max-width: 980px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e8edf2;
+      padding: 24px 0;
+    }
+
+    .faq-item h2 {
+      font-size: 22px;
+      margin: 0 0 8px;
+      color: #102033;
+    }
+
+    .faq-item p {
+      font-size: 17px;
+      color: #536270;
+      margin: 0;
+    }
+
+    .notice {
+      background: #eef8fc;
+      border-left: 5px solid #00a6d6;
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 35px;
+      color: #334454;
+    }
+
+    .cta {
+      background: #102033;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta p {
+      color: #d7e4ec;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 15px 26px;
+      border-radius: 999px;
+      background: #00a6d6;
+      color: white;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #07121f;
+      color: #b9c7d3;
+      text-align: center;
+      padding: 28px 18px;
+      font-size: 14px;
+    }
+  </style>
 </head>
-<body style="font-family:Arial; padding:40px;">
 
-<h1>Frequently Asked Questions</h1>
+<body>
 
-<h3>Do I need a license?</h3>
-<p>No special license required. Basic instructions will be provided.</p>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<h3>What is the age requirement?</h3>
-<p>Must be 18+ to rent. Riders may vary depending on safety guidelines.</p>
+  <section class="hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything customers usually want to know before booking a jet ski or boat rental.</p>
+  </section>
 
-<h3>What if the weather is bad?</h3>
-<p>Bookings may be rescheduled if conditions are unsafe.</p>
+  <section class="section">
 
-<h3>How do I book?</h3>
-<p>Use our online booking system to check availability and reserve your time.</p>
+    <div class="notice">
+      Final requirements, pricing, availability, and safety instructions are confirmed during booking and check-in.
+      Lake conditions, weather, and local rules may affect rentals.
+    </div>
 
-<a href="index.html">Back to Home</a>
+    <div class="faq-item">
+      <h2>How do I book a rental?</h2>
+      <p>Use the online booking section on our homepage to check availability, select a time, and reserve your rental.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Can I pay online?</h2>
+      <p>Yes. Online booking allows customers to reserve and pay through the booking system when required.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Do I need to call first?</h2>
+      <p>No. The easiest way is to book online. You can still call or text if you have a specific question before booking.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Where are you located?</h2>
+      <p>We serve Chicago’s lakefront. Exact meeting details are provided after booking or confirmation.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>What are your hours?</h2>
+      <p>Hours vary by season, weather, and availability. The booking calendar will show available times.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>What happens if the weather is bad?</h2>
+      <p>Safety comes first. If lake or weather conditions are unsafe, the rental may need to be rescheduled.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Do I need experience to rent a jet ski?</h2>
+      <p>Basic instructions are provided before riding. Renters should feel comfortable following safety directions and operating responsibly.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Do I need a boating license or safety certificate?</h2>
+      <p>Requirements can depend on the rental type, operator age, and local/state rules. Any required safety or operator rules will be confirmed before the rental.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Are life jackets provided?</h2>
+      <p>Life jackets or personal flotation devices are part of safe water activity. Proper safety equipment requirements will be reviewed before riding.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>What should I bring?</h2>
+      <p>Bring a valid ID, payment method if needed, sunscreen, towel, water-friendly clothing, and anything you need to be comfortable on the lakefront.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Can I bring my phone?</h2>
+      <p>You can, but water damage is always a risk. A waterproof pouch is recommended if you plan to bring your phone near the water.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Can multiple people ride?</h2>
+      <p>Passenger limits depend on the rental type, equipment, safety rules, and weight limits. Details are confirmed before the rental.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Can I drink alcohol before or during the rental?</h2>
+      <p>No. Customers should not operate any watercraft while under the influence. Safety rules must be followed at all times.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>What if I’m late?</h2>
+      <p>Please arrive on time. Late arrival may reduce your rental time because other bookings may be scheduled after yours.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Is there a security deposit?</h2>
+      <p>Deposit requirements may vary depending on the rental. Any deposit or damage policy will be shown or explained before confirmation.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>What is the cancellation policy?</h2>
+      <p>Cancellation and rescheduling rules may vary by booking type, weather, and timing. Check your booking confirmation for details.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Can I book for a group or event?</h2>
+      <p>Yes, depending on availability. For groups, birthdays, or special requests, call or text before booking.</p>
+    </div>
+
+  </section>
+
+  <section class="cta">
+    <h2>Still Have Questions?</h2>
+    <p>Call or text us, or check availability online.</p>
+    <a class="btn" href="contact.html">Contact Us</a>
+  </section>
+
+  <footer>
+    © 2026 Water City Rentals. All rights reserved.
+  </footer>
 
 </body>
 </html>
